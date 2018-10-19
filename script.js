@@ -1,6 +1,12 @@
 //this is the lastOpinionButton section
 $('#lastOpinionButton').click(function(){
-  $('#rightBox').html("<h1>Last Opinions<h1><div><div class='noBorder'><img class='imgOpinion' src='images/ritz.jpg'> <!-- image of ritx  --> <h5>Hotel Ritz</h5> <!-- hotel name  --><h5>Madrid, Spain</h5> <!-- location  --><h5>16-5-1986</h5> <!-- date  --></div><div class='noBorder'><p id='opinions'>This is my favorite hotel in Madrid! The hotel restaurant is amazing - I would definitely recommend trying the lobster! The location is perfect and is near many of the main tourist sights that you should see when you are visiting the city! It is a little expensive, but worth it!</p> <!-- hotel review  --></div></div> <!-- close div object 1  --><div> <!-- start new div object  --><div class='noBorder'><img class='imgOpinion' src='images/laArdosa.jpg'><!-- La Ardosa image   --><h5>La Adorsa</h5> <!-- restaurant name  --><h5>Madrid, Spain</h5> <!-- location  --><h5>23-8-2005</h5> <!-- date  --></div><div class='noBorder'><p id='opinions'>This is a great bodega in a busy and popular area of the city. It gets pretty crowded at night so I would recommend getting there early to secure a good seat. I heard that they are famous for their tortillas and they lived up to the expectation! Very fair pricing as well. </p> <!-- restaurant review  --></div>  </div> <!-- close reviews div object  --></div>");
+  $('#rightBox').html("<h1>Last Opinions<h1><div><div class='noBorder'><img class='imgOpinion' src='images/ritz.jpg'> <!-- image of ritx  --> <h5 id = 'ritz2Button'>Hotel Ritz</h5> <!-- hotel name  --><h5>Madrid, Spain</h5> <!-- location  --><h5>16-5-1986</h5> <!-- date  --></div><div class='noBorder'><p id='opinions'>This is my favorite hotel in Madrid! The hotel restaurant is amazing - I would definitely recommend trying the lobster! The location is perfect and is near many of the main tourist sights that you should see when you are visiting the city! It is a little expensive, but worth it!</p> <!-- hotel review  --></div></div> <!-- close div object 1  --><div> <!-- start new div object  --><div class='noBorder'><img class='imgOpinion' src='images/laArdosa.jpg'><!-- La Ardosa image   --><h5 id = 'ardosa2Button'>La Adorsa</h5> <!-- restaurant name  --><h5>Madrid, Spain</h5> <!-- location  --><h5>23-8-2005</h5> <!-- date  --></div><div class='noBorder'><p id='opinions'>This is a great bodega in a busy and popular area of the city. It gets pretty crowded at night so I would recommend getting there early to secure a good seat. I heard that they are famous for their tortillas and they lived up to the expectation! Very fair pricing as well. </p> <!-- restaurant review  --></div>  </div> <!-- close reviews div object  --></div>");
+  $('#ritz2Button').click(function(){
+    alert(ritzButtonString);
+  });
+  $('#ardosa2Button').click(function(){
+  alert(ardosaString);
+});
 });
 //here ends the lastOpinionButton section
 
@@ -46,14 +52,37 @@ $('#'+id1).remove();
 });
 //here ends the myPreferenceButton section
 
-$('#ritzButton').click(function(){ //alert pop up box for Hotel Ritz Madrid
-  alert("Name: Hotel Ritz Madrid\nAddress: Plaza de la Lealtad, 5, 28014 Madrid\nWebsite: https://www.mandarinoriental.com/madrid/hotel-ritz/luxury-hotel \nTelephone Number: (+34) 91 701 67 67 \nEmail: RZMAD-RESERVATIONS@MOHG.COM \nFacebook: Hotel Ritz, Madrid\nPrice: At least 300 per night\nDescription: Set in a grand building built in 1910, this plush luxury hotel is a 4-minute walk from the Museo del Prado and 15 km from Madrid-Barajas Airport \nOpinion: This is my favorite hotel in Madrid! The hotel restaurant is amazing I would definitely recommend trying the lobster! The location is perfect and is near many of the main tourist sights that you should see when you are in the city! It is a little expensive, but worth it!")
-});
+var modal = document.getElementById('myModal'); //create modal boxes here
+var btn = document.getElementById("ritzButton");
+var span = document.getElementsByClassName("close")[0];
+btn.onclick=function(){
+  modal.style.display = "block";
+}
+span.onclick = function() {
+    modal.style.display = "none";
+}
 
-$('#ardosa').click(function(){ //alert pop up box for La Ardosa
-  alert("Name: La Ardosa\nAddress: Calle de Colon, 13, 28004 Madrid\nWebsite: http://www.laardosa.es/ \nTelephone Number: (+34) 91 521 49 79 \nEmail: N/A \nFacebook: Bodega La Ardosa\nPrice: $$-$$$ (Moderately Priced)\nDescription: They offer a wide variety of Irish beers at very reasonable prices, vermouth on tap, lagers, fine wines from La Ribera and Rioja. For snacks, they offer a variety of 'tapas', 'salmorejo' (a thick, cold tomato and garlic soup), cold meats, cured meat from Leon, duck ham and potato omelette, among other things. \nOpinion: This is a great bodega in a busy and popular area of the city. It gets pretty crowded at night so I would recommend getting there early to secure a good seat. I heard that they are famous for their tortillas and they lived up to the expectation! Very fair pricing as well")
-});
 
-$('#sacha').click(function(){ //alert pop up box for Sacha
-  alert("Name: Restaurante Sacha\nAddress: 11, Calle de Juan Hurtado de Mendoza, 28036 Madrid\nTrip Advisor: https://www.tripadvisor.com/Restaurant_Review-g187514-d991775-Reviews-Sacha-Madrid.html \nTelephone Number: (+34) 913 45 59 52 \nEmail: N/A \nFacebook: Restaurante Sacha\nPrice: $$$$ (Expensive)\nDescription: Sacha, an old-school Spanish restaurant that was originally started by a couple who named the place after their only son. As luck would have it, Sacha is now the head chef and proprietor, helming a menu that has become a staple for Madrid foodies. The offerings here change seasonally, but the selection always has its foundation in traditional Spanish cuisine \nOpinion: This is a top tier restaurant in Madrid. It is a very popular restaurant with the locals and there are not many tourists! They have a great wine list and every item on the menu has been carefully thought out. It is a little hard to find, but I will be back next time I am in Madrid!")
-});
+var modal2 = document.getElementById('ardosaM'); //create modal boxes here
+var btn2 = document.getElementById("ardosa");
+var span2 = document.getElementsByClassName("close")[1];
+btn2.onclick=function(){
+  modal2.style.display = "block";
+}
+span2.onclick = function() {
+    modal2.style.display = "none";
+}
+
+var modal3 = document.getElementById('sachaM'); //create modal boxes here
+var btn3 = document.getElementById("sacha");
+var span3 = document.getElementsByClassName("close")[2];
+btn3.onclick=function(){
+  modal3.style.display = "block";
+}
+span3.onclick = function() {
+    modal3.style.display = "none";
+}
+
+var ritzButtonString = "Name: Hotel Ritz Madrid\nAddress: Plaza de la Lealtad, 5, 28014 Madrid\nWebsite: https://www.mandarinoriental.com/madrid/hotel-ritz/luxury-hotel \nTelephone Number: (+34) 91 701 67 67 \nEmail: RZMAD-RESERVATIONS@MOHG.COM \nFacebook: Hotel Ritz, Madrid\nPrice: At least 300 per night\nDescription: Set in a grand building built in 1910, this plush luxury hotel is a 4-minute walk from the Museo del Prado and 15 km from Madrid-Barajas Airport \nOpinion: This is my favorite hotel in Madrid! The hotel restaurant is amazing I would definitely recommend trying the lobster! The location is perfect and is near many of the main tourist sights that you should see when you are in the city! It is a little expensive, but worth it!";
+
+var ardosaString = "Name: La Ardosa\nAddress: Calle de Colon, 13, 28004 Madrid\nWebsite: http://www.laardosa.es/ \nTelephone Number: (+34) 91 521 49 79 \nEmail: N/A \nFacebook: Bodega La Ardosa\nPrice: $$-$$$ (Moderately Priced)\nDescription: They offer a wide variety of Irish beers at very reasonable prices, vermouth on tap, lagers, fine wines from La Ribera and Rioja. For snacks, they offer a variety of 'tapas', 'salmorejo' (a thick, cold tomato and garlic soup), cold meats, cured meat from Leon, duck ham and potato omelette, among other things. \nOpinion: This is a great bodega in a busy and popular area of the city. It gets pretty crowded at night so I would recommend getting there early to secure a good seat. I heard that they are famous for their tortillas and they lived up to the expectation! Very fair pricing as well";
